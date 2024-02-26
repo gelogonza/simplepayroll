@@ -1,2 +1,36 @@
-<h1>Payroll Calculation Result</h1>
-<p>Total Pay: {{ total_pay }}</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payroll Result</title>
+    <style>
+        h1 {
+            font-size: 24px; /* Adjust the font size as needed */
+            font-weight: bold;
+            color: purple;
+            text-align: center; /* Center the text */
+        }
+        .result-container {
+            max-width: 400px;
+            margin: 0 auto; /* Center the container horizontally */
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            text-align: center; /* Center text within container */
+        }
+        .result-text {
+            font-size: 18px;
+            color: #333; /* Dark text color */
+        }
+    </style>
+</head>
+<body>
+    <div class="result-container">
+        <h1>Payroll Result</h1>
+        <p class="result-text">The result of the payroll calculation is:</p>
+        <p class="result-text">Total Pay: ${{ total_pay }}</p>
+    </div>
+</body>
+</html>

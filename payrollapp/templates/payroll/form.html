@@ -1,5 +1,68 @@
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Calculate Payroll</button>
-</form>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payroll Form</title>
+    <style>
+        h1 {
+            font-size: 24px; /* Adjust the font size as needed */
+            font-weight: bold;
+            color: purple;
+            text-align: center; /* Center the text */
+        }
+        label {
+            font-weight: bold;
+            color: purple;
+            display: block; /* Ensure labels are displayed on a new line */
+        }
+        input[type="text"],
+        input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: purple;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #6a0dad; /* Darker shade of purple on hover */
+        }
+        .form-container {
+            max-width: 400px;
+            margin: 0 auto; /* Center the form horizontally */
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Payroll Calculator</h1>
+        <form method="post">
+            {% csrf_token %}
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name">
+            </div>
+            <div>
+                <label for="rate_of_pay">Rate of Pay:</label>
+                <input type="number" id="rate_of_pay" name="rate_of_pay" placeholder="Enter rate of pay">
+            </div>
+            <div>
+                <label for="hours_worked">Hours Worked:</label>
+                <input type="number" id="hours_worked" name="hours_worked" placeholder="Enter hours worked">
+            </div>
+            <button type="submit">Calculate Payroll</button>
+        </form>
+    </div>
+</body>
+</html>
