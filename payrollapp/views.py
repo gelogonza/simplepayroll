@@ -11,3 +11,6 @@ def calculate_payroll(request):
     else:
         form = PayrollForm()
     return render(request, 'payroll/form.html', {'form': form})
+
+def landing_page(request):
+    return render(request, 'payroll/landing_page.html')
