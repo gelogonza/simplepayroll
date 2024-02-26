@@ -18,11 +18,28 @@
             font-weight: bold;
             color: purple; 
         }
+        .calculator-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: purple;
+            color: white;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+        .calculator-button:hover {
+            background-color: darkpurple;
+        }
     </style>
 </head>
 <body>
     <div class="landing-container">
         <h1 class="landing-text">Welcome to the Payroll Calculator</h1>
+        <!-- Button to redirect to the calculation page -->
+        <a href="{% url 'calculator_page' %}" class="calculator-button">Go to Calculator</a>
     </div>
 </body>
 </html>
